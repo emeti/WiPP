@@ -6,7 +6,7 @@ Or obtain access to a VM ready with CentOS 7.
 
 ## Intstall required tools
 
-Open terminal with shell. This is your main for installing required tools as well as starting the workflow.
+Open terminal with shell. This is your main interface for installing required tools as well as starting and interacting with the workflow.
 
 Your account needs to be in sudo-ers group (admin priviledges) to install some prerequisites (git).
 
@@ -32,4 +32,4 @@ The rest of the steps is the same as outlined in the Ubuntu installation
 See the [Ubuntu-INSTALL instructions](./Ubuntu-INSTALL.md)
 
 Basically - one needs to install an appropriate version of conda, get the WiPP repo copy and follow the steps from the main 
-[README](../REAMDE.md)
+[README](../README.md)
