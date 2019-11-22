@@ -25,6 +25,7 @@ Local installation in VMWare or Virtual Box:
 1. Goto [Ubuntu alternative downloads](https://ubuntu.com/download/alternative-downloads) and download the operating system installer ISO image
 2. Create a new virtual machine , start the installer, create a user, select packages
 
+Terminal with shell will be the main execution interface.
 
 ### Hardware requirements
 
@@ -36,6 +37,34 @@ Disk size - 50 GB
 
 There were some problems with using the default VMware Fusion VM settings for Ubuntu of 20GB disk / 1 CPU / small Mem . 
 The problems were with conda environments (running out of disk space warnings) and with workflow runs (snakemake errors) - disappeared with resources increase outline above.
+
+## Install git
+
+```
+sudo apt-get update
+sudo apt install git
+```
+Why git ? Apparently git is required by the snakemake part of the workflow. Question: Why? Answer: Ask the authors.
+
+## Instcall curl (optional)
+
+```
+sudo apt install curl
+```
+
+If you want to skip curl install you need to modify the command downloading conda used in the next later to use wget.
+
+The versions used further
+```
+$ git --version
+git version 2.7.4
+$ curl --version
+curl 7.47.0 (x86_64-pc-linux-gnu)
+...
+``` 
+
+The curl dependency used to obtain conda below is optional, but very useful.
+
 
 ## Install conda
 
@@ -55,25 +84,6 @@ sh miniconda3.sh
 I think this part is not necessary, unless separate software apart from the WiPP workflow needs this. 
 It is an incorrect statement in the original WiPP instructions.
 All required libraries are pulled by conda using a proper (frozen) list of dependencies from a new R\_env.yaml file.
-
-## Install git and curl (optional)
-
-```
-sudo apt-get update
-sudo apt install git
-sudo apt install curl
-```
-
-The versions used further
-```
-$ git --version
-git version 2.7.4
-$ curl --version
-curl 7.47.0 (x86_64-pc-linux-gnu)
-...
-``` 
-
-The curl dependency used to obtain conda below is optional, but very useful.
 
 
 ## Clone WiPP repository
