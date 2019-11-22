@@ -95,7 +95,6 @@ rm WiPP-master.zip
 cd WiPP-master
 ```
 
-The natural ``git clone https://[WiPP repo]`` (i.e. not an ssh version) sometimes does not work (see stackexchanges for various reasons) hence we have used wget to get the repository copy and to avoid problems. It is OK instead of clone if no active git commits/push operations will be used. If you need a clone of WiPP repository in order to commit and push changes - us git (clone, push, remote, fetch, pull, ..) commands instead.
 
 ## Note about R\_env.yaml
 
