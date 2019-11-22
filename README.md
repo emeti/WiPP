@@ -13,6 +13,8 @@ This document aims to help you get started with **WiPP** and brings you through 
 - Ubuntu 16 (Xenial Xerus)
 - CentOS 7.6.1810 (Core)
 
+For fresh Ubuntu setup one can follow the [Ubuntu-INSTALL instructions](documentation/Ubuntu-INSTALL.md).
+
 Ubuntu 18 (Bionic Beaver) is not supported yet due to lacking support of incorporated R packages.
 
 ## Requirements
@@ -43,7 +45,7 @@ cd ./projects/example_project
 From there, you can now run the first part of the pipeline, the generation of the training data.
 You can adjust the number of cores using the inline paramter `-n <CORES>`:
 ```bash
-../../run_WiPP.sh tr -n 4 
+../../run_WiPP.sh tr -n 4
 ```
 > ### Note
 > Running this for the first time takes a while: another conda environment is created
@@ -75,7 +77,7 @@ To actually run **WiPP** subsequently, you have to follow the same steps as in t
 ### Input files
 Let's create and structure the directory for your data files. **WiPP** supports mzML, mzData and NetCDF file formats.
 
-You can create the `Input_folder` directory anywhere you want as long as it is accessible to the tool. You can also name it the way you want, but for clarity purposes, we will call it `Input_folder` in this tutorial. 
+You can create the `Input_folder` directory anywhere you want as long as it is accessible to the tool. You can also name it the way you want, but for clarity purposes, we will call it `Input_folder` in this tutorial.
 
 Here is the structure:
 ```
@@ -123,10 +125,9 @@ That's all for the basic settings, you are now ready to run the pipeline.
 
 > ### Note
 > Keep in mind that those parameters are the only one required to run the pipeline, but there is a lot more you can do to precisely tune the pipeline. Have a read through the [complete user guide](documentation/USERGUIDE.md) to learn more.
- 
+
 ### Running the pipeline
 Follow the same steps as in the [example_project](#running-a-test-project).
 
 > ### Note
 > Peak annotation usually takes several hours (1200 peaks per algorithm by default), but you only need to do that once per instrument/protocol. Once trained, the SVM classifiers can be reused on other datasets generated with the same instrument and data acquisition method.
-
