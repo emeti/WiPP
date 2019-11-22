@@ -21,9 +21,11 @@ Ubuntu 18 (Bionic Beaver) is not supported yet due to lacking support of incorpo
 
 ## Requirements
 - conda ([Bioconda website - Python 3.x](https://conda.io/en/latest/miniconda.html))
-- libnetcdf11 ([Ubuntu packages website](https://packages.ubuntu.com/xenial/libs/libnetcdf11))
 
 > ### Note
+> IMPORTANT - snakemake does not work well with the latest conda. 
+See the info in [OS requirements install](documentation/Ubuntu-INSTALL.md)
+ which version of conda has been tested to work.
 > If you install conda from scratch, remember to `source ~/.bashrc` or open a new terminal before installing WiPP.
 
 ## Installation
