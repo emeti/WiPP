@@ -47,7 +47,7 @@ I think this part is not necessary, unless separate software apart from the WiPP
 It is an incorrect statement in the original WiPP instructions.
 All required libraries are pulled by conda using a proper (frozen) list of dependencies from a new R\_env.yaml file.
 
-## Install git and curl
+## Install git and curl (optional)
 
 ```
 sudo apt-get update
