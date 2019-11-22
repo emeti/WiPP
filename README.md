@@ -40,18 +40,18 @@ Now you are ready to run **WiPP**!
 
 > ### NOTE - if git clone fails
 > If your git clone command fails - e.g. like this 
-```
-error: RPC failed; curl 18 transfer closed with outstanding read data remaining
-fatal: the remote end hung up unexpectedly
-fatal: early EOF
-fatal: index-pack failed
-```
-then ask yourself a few questions: Do I actually need the whole git repository history of commits of WiPP  or just a latest snapshot copy of the WiPP scripts? Am I a developer of WiPP or a user? If the answer is "No, I am a user, and one point in time is fine" then 
-```
-git clone --depth 1 https://github.com/emeti/WiPP.git
-```
-You can search internet for fixes to the git RPC error: and use other fixes (change to ssh, modify buffers, run diagnostics) - however the root cause of the problem is usually in the history of commits and some large files there. Shallow clone works for me - I am not an investigative historian.
-Alternatiely, you can download the zip of the master using wget (or curl) - as shown in [Ubuntu requirements install](documentation/Ubuntu-INSTALL.md).
+> ```
+> error: RPC failed; curl 18 transfer closed with outstanding read data remaining
+> fatal: the remote end hung up unexpectedly
+> fatal: early EOF
+> fatal: index-pack failed
+> ```
+> then ask yourself a few questions: Do I actually need the whole git repository history of commits of WiPP  or just a latest snapshot copy of the WiPP scripts? Am I a developer of WiPP or a user? If the answer is "No, I am a user, and one point in time is fine" then 
+> ```
+> git clone --depth 1 https://github.com/emeti/WiPP.git
+> ```
+> You can search internet for fixes to the git RPC error: and use other fixes (change to ssh, modify buffers, run diagnostics) - however the root cause of the problem is usually in the history of commits and some large files there. Shallow clone works for me - I am not an investigative historian.
+> Alternatiely, you can download the zip of the master using wget (or curl) - as shown in [Ubuntu requirements install](documentation/Ubuntu-INSTALL.md).
 
 ## Running a test project
 
