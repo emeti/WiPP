@@ -14,6 +14,7 @@ This document aims to help you get started with **WiPP** and brings you through 
 - CentOS 7.6.1810 (Core)
 
 Setup of prerequisites in Ubuntu 16 - follow the [Ubuntu-INSTALL instructions](documentation/Ubuntu-INSTALL.md)
+
 Setup of prerequisites in CentOS 7 - follow the [CentOS-INSTALL instructions](documentation/CentOS-INSTALL.md)
 
 Ubuntu 18 (Bionic Beaver) is not supported yet due to lacking support of incorporated R packages.
