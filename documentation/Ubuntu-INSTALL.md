@@ -46,13 +46,13 @@ sudo apt install git
 ```
 Why git ? Apparently git is required by the snakemake part of the workflow. Question: Why? Answer: Ask the authors.
 
-## Instcall curl (optional)
+## Install curl (optional)
 
 ```
 sudo apt install curl
 ```
 
-If you want to skip curl install you need to modify the command downloading conda used in the next later to use wget.
+If you want to skip curl install to keep the build minimal, then you would need to modify the command downloading conda used in the subsequent step and use wget instead of curl. I like to have curl handy as a very powerfull tool though.
 
 The versions used further
 ```
