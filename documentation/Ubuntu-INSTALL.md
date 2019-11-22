@@ -79,7 +79,7 @@ The curl dependency used to obtain conda below is optional, but very useful.
 ## Clone WiPP repository
 
 ```
-wget -O WiPP-master.zip https://github.com/emeti/WiPP/archive/master/zip
+wget -O WiPP-master.zip https://github.com/emeti/WiPP/archive/master.zip
 unzip WiPP-master.zip
 rm WiPP-master.zip
 cd WiPP-master
