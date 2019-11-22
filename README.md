@@ -22,11 +22,12 @@ Ubuntu 18 (Bionic Beaver) is not supported yet due to lacking support of incorpo
 ## Requirements
 - conda ([Bioconda website - Python 3.x](https://conda.io/en/latest/miniconda.html))
 
-> ### Note
-> IMPORTANT - snakemake does not work well with the latest conda. 
-See the info in [OS requirements install](documentation/Ubuntu-INSTALL.md)
- which version of conda has been tested to work.
-> If you install conda from scratch, remember to `source ~/.bashrc` or open a new terminal before installing WiPP.
+> ### IMPORTANT Note
+> Currently Snakemake (the main workflow tool used by WiPP) does not work well with the latest conda. 
+See the [Ubuntu requirements install](documentation/Ubuntu-INSTALL.md) for info 
+ which version of conda has been tested to work (applies to CentOS and other os).
+
+If you install conda from scratch, remember to `source ~/.bashrc` or open a new terminal before installing WiPP.
 
 ## Installation
 You can install **WiPP** using the following command:
@@ -36,6 +37,21 @@ cd WiPP
 make
 ```
 Now you are ready to run **WiPP**!
+
+> ### NOTE - if git clone fails
+> If your git clone command fails - e.g. like this 
+```
+error: RPC failed; curl 18 transfer closed with outstanding read data remaining
+fatal: the remote end hung up unexpectedly
+fatal: early EOF
+fatal: index-pack failed
+```
+then ask yourself a few questions: Do I actually need the whole git repository history of commits of WiPP  or just a latest snapshot copy of the WiPP scripts? Am I a developer of WiPP or a user? If the answer is "No, I am a user, and one point in time is fine" then 
+```
+git clone --depth 1 https://github.com/emeti/WiPP.git
+```
+You can search internet for fixes to the git RPC error: and use other fixes (change to ssh, modify buffers, run diagnostics) - however the root cause of the problem is usually in the history of commits and some large files there. Shallow clone works for me - I am not an investigative historian.
+Alternatiely, you can download the zip of the master using wget (or curl) - as shown in [Ubuntu requirements install](documentation/Ubuntu-INSTALL.md).
 
 ## Running a test project
 
