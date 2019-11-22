@@ -20,19 +20,21 @@ I do not see a real reason that the builds of R libraries cannot be done with ne
 ### Hardware requirements
 
 CPUs (cores) - 4
+
 Memory - 8 GB
+
 Disk size - 50 GB 
 
 There were some problems with using the default VMware Fusion VM settings for Ubuntu of 20GB disk / 1 CPU / small Mem . 
-The problems were with conda environments environments (running out of disk space warnings) and with workflow runs (snakemake errors) - disappeared with resources increase outline above.
+The problems were with conda environments (running out of disk space warnings) and with workflow runs (snakemake errors) - disappeared with resources increase outline above.
 
 ## Install conda
 
-At the time of writing  there are [issues with snakemake and conda]() - there are some hacks to make new conda work with curent snakemake but they are all dirty hacks and would lead to further problems).
+At the time of writing  there are [still unresolved issues with snakemake and conda](https://bitbucket.org/snakemake/snakemake/issues/1115/cannot-activate-conda-enironment-using ) - there are some hacks to make new conda work with curent snakemake but they are all dirty hacks and would inevitably lead to further problems.
 
 This problem has been address by using an older version conda, the one which still is using the old (and non-portable/conflicing ) ``source activate`` instead of ``conda activate`` command for switching environments.
 
-Here is conda install 
+Here is what to do to install a compatible (mini)conda version 
 
 ```
 curl -sSL https://repo.anaconda.com/miniconda/Miniconda3-4.3.31-Linux-x86_64.sh -o miniconda3.sh
@@ -62,7 +64,8 @@ curl 7.47.0 (x86_64-pc-linux-gnu)
 ...
 ``` 
 
-curl dependency used to obtain conda below is optional, but very useful
+The curl dependency used to obtain conda below is optional, but very useful.
+
 
 ## Clone WiPP repository
 
@@ -70,16 +73,23 @@ curl dependency used to obtain conda below is optional, but very useful
 wget -O WiPP-master.zip https://github.com/emeti/WiPP/archive/master/zip
 unzip WiPP-master.zip
 rm WiPP-master.zip
-cd WiPP
+cd WiPP-master
 ```
 
-The natural ``git clone https://[WiPP repo]`` (i.e. not an ssh version) sometimes does not work (see stackexchanges for various reasons) hence we use wget to avoid problems.
+The natural ``git clone https://[WiPP repo]`` (i.e. not an ssh version) sometimes does not work (see stackexchanges for various reasons) hence we have used wget to get the repository copy and to avoid problems. It is OK instead of clone if no active git commits/push operations will be used. If you need a clone of WiPP repository in order to commit and push changes - us git (clone, push, remote, fetch, pull, ..) commands instead.
 
-## R\_env.yaml
+## Note about R\_env.yaml
 
-Make sure you use a modified R libraries dependencies. If WiPP is cloned from an EMETI fork of WiPP you will use the recently  tested R lib environment settings.
+This file is used by the WiPP scripts / snakemake / conda and is critical environment dependencies defintion and correctness of it is necessary for the workflow to work. Make sure you use a modified R libraries dependencies. There is a way to test it and modify it separately (e.g. for upgrades) using conda withoug running the whole workflow (time consuming). Please contact the author for hints if you need to do that. 
+
+If your local  WiPP (or WiPP-master) directory contains code cloned from an EMETI fork of WiPP you will be using the recently tested R lib environment settings.
 
 ## Run WiPP
-Follow the instructions from a [README](../README.md) 
+Follow the instructions from a [README](../README.md) from the Run point.
+
+## I do not like snakemake can we change WiPP to use another workflow system (but the same dependencies and idea) ?
+
+Look for alternatives here : 
+[CWL - Common Workflow Language ](https://github.com/common-workflow-language/common-workflow-language/wiki/Existing-Workflow-systems)
 
 
