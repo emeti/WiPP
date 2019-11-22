@@ -16,6 +16,15 @@ Following advice from [README](./REAMDE.md) only Ubuntu version 16 has been atte
 
 I do not see a real reason that the builds of R libraries cannot be done with newer glibc versions and run in Ubuntu 18, but have not attempted them as that certainly is more work.
 
+### Create a VM with Ubuntu OS
+
+Make sure to use version 16 of Ubuntu
+
+Local installation in VMWare or Virtual Box:
+
+1. Goto [Ubuntu alternative downloads](https://ubuntu.com/download/alternative-downloads) and download the operating system installer ISO image
+2. Create a new virtual machine , start the installer, create a user, select packages
+
 
 ### Hardware requirements
 
