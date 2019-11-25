@@ -32,11 +32,13 @@ If you install conda from scratch, remember to `source ~/.bashrc` or open a new 
 ## Installation
 You can install **WiPP** using the following command:
 ```bash
-git clone https://github.com/bihealth/WiPP.git
+git clone https://github.com/emeti/WiPP.git
 cd WiPP
 make
 ```
 Now you are ready to run **WiPP**!
+
+> NOTE - emeti in the github repo address is required - as this WiPP is a fork of [github.com/bihealth/WiPP](https://github.com/bihealth/WiPP.git) it contains slight modification which we found necessary to make it work in vanilla CentOS and Ubuntu VMs and containers.
 
 > ### NOTE - if git clone fails
 > If your git clone command fails - e.g. like this 
