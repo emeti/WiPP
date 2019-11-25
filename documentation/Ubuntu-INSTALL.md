@@ -83,9 +83,9 @@ If you need to use a newer version of conda beware of the problems.
 
 ## Install libnetcdf
 
-I think this part is not necessary, unless separate software apart from the WiPP workflow needs this. 
-It is an incorrect statement in the original WiPP instructions.
-All required libraries are pulled by conda using a proper (frozen) list of dependencies from a new R\_env.yaml file.
+There is no need to install [netcdf library](https://www.unidata.ucar.edu/software/netcdf/) via apt-get (Ubuntu package manager), unless you really need a system-wide install or have other software using the same library.
+
+For a user install with separate environment or a dockeer contaienr all necessary libraries, including netcdf, are pulled by conda using a frozen list of dependencies from a correct R\_env.yaml file.
 
 
 ## Clone or copy WiPP repository
